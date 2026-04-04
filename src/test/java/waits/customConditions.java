@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class RabotaScript_customConditions {
+public class customConditions {
 
     public static ExpectedCondition<Boolean> jQueryAJAXsCompleted () {
         return new ExpectedCondition<Boolean>() {

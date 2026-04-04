@@ -2,13 +2,13 @@ package pageobject_models.page;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import waits.RabotaScript_customConditions;
+import waits.customConditions;
 
 import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
 
-import static waits.RabotaScript_customConditions.waitForElementLocatedBy;
+import static waits.customConditions.waitForElementLocatedBy;
 
 public class RabotaSearchResults {
 
@@ -63,7 +63,7 @@ public class RabotaSearchResults {
         WebElement filterButton = driver.findElement(radioButton);
         js.executeScript("arguments[0].scrollIntoView();", filterButton);
         js.executeScript("arguments[0].click();", filterButton);
-        waitAJAX.until(RabotaScript_customConditions.jQueryAJAXsCompleted());
+        waitAJAX.until(customConditions.jQueryAJAXsCompleted());
         js.executeScript("window.scrollTo(0, 0);");
         return this;
     }

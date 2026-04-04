@@ -2,11 +2,11 @@ package pageobject_models.page;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import waits.RabotaScript_customConditions;
+import waits.customConditions;
 
 import java.time.Duration;
 
-import static waits.RabotaScript_customConditions.waitForElementLocatedBy;
+import static waits.customConditions.waitForElementLocatedBy;
 
 public class RabotaMainPage {
 
@@ -27,7 +27,7 @@ public class RabotaMainPage {
     public RabotaMainPage openPage() {
         driver.get("https://rabota.by");
         driver.manage().window().maximize();
-        waitAJAX.until(RabotaScript_customConditions.jQueryAJAXsCompleted());
+        waitAJAX.until(customConditions.jQueryAJAXsCompleted());
         return this;
     }
 
