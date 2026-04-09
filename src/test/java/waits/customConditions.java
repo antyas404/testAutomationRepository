@@ -28,4 +28,10 @@ public class customConditions {
                 .until(ExpectedConditions
                         .presenceOfElementLocated(by));
     }
+
+    private static @NonNull WebElement waitForElementToBeClickable(WebDriver driver, By by) {
+        return new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions
+                        .elementToBeClickable(by));
+    }
 }
