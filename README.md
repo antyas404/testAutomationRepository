@@ -5,6 +5,60 @@ Each test scenario focuses on real-world challenges such as dynamic content, AJA
 
 ---
 
+## Getting Started
+
+### Prerequisites
+
+- **JDK 21**
+- **Git**
+- **Google Chrome** — the matching chromedriver is downloaded automatically by WebDriverManager
+- Internet connection
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/antyas404/testAutomationRepository.git
+cd testAutomationRepository
+```
+
+### 2. Verify the project compiles
+
+The Maven Wrapper is included, so no Maven installation is required.
+
+Windows:
+
+```bash
+mvnw.cmd test-compile
+```
+
+macOS / Linux:
+
+```bash
+./mvnw test-compile
+```
+
+### 3. Run the tests
+
+The test suite is defined in `src/test/resources/testng.xml` and wired into Maven via the Surefire plugin.
+
+Run all tests:
+
+```bash
+mvnw.cmd test        # Windows
+./mvnw test          # macOS / Linux
+```
+
+To run a specific test class from an IDE (IntelliJ IDEA):
+
+1. Open the project as a Maven project.
+2. Wait for dependencies to download.
+3. Right-click a test class or method and choose **Run**.
+
+> **Note:** The tests are E2E scenarios against live websites (rabota.by, kaminbel.by).
+> Popups, cookie banners, and AJAX content may appear, and selectors can break if the sites change.
+
+---
+
 Project Goals
 
 - Strengthen practical skills in UI test automation  
@@ -18,7 +72,7 @@ Project Goals
 
 Technologies & Tools
 
-- **Java 17+**
+- **Java 21**
 - **Selenium WebDriver**
 - **TestNG**
 - **Page Object Model (POM)**
